@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Option.css" />
+
+    </head>
+    <body>
+       <div class="backgroundframe">
+            <div class="upleft">
+                Monte Carlo Price Simulation Inputs<br /><br />
+                (Enter 0 if the parameter of your option is not relevant.)<br /><br />
+                Call or Put
+                <select id="Call_put">
+                    <option type="call">call</option>
+                    <option type="put">put</option>
+                </select><br />
+                S<input id="S" style="width: 100px; " /><br />
+                K<input id="K" style="width: 100px; " /><br />
+                T<input id="T" style="width: 100px; " /><br />
+                r<input id="r" style="width: 100px; " /><br />
+                sigma<input id="sigma" style="width: 100px; " /><br />
+                N<input id="N" style="width: 100px; " /><br />
+                steps<input id="steps" style="width: 100px; " /><br />
+                Apply Antithetic
+                <select id="Anti">
+                    <option anti="no">no</option>
+                    <option anti="yes">yes</option>
+                </select><br />
+                Apply Control Variate
+                <select id="CV">
+                    <option CV="no">no</option>
+                    <option CV="yes">yes</option>
+                </select><br />
+                Apply Multi Threading
+                <select id="Multi_thread">
+                    <option multhread="no">no</option>
+                    <option multhread="yes">yes</option>
+                </select><br />
+                Option Type
+                <select id="Option_type">
+                    <option optiontype="European">European</option>
+                    <option optiontype="Asian">Asian</option>
+                    <option optiontype="Digital">Digital</option>
+                    <option optiontype="Barrier">Barrier</option>
+                    <option optiontype="Lookback">Lookback</option>
+                    <option optiontype="Range">Range</option>
+                </select><br />
+                Pay amount for digital option<input id="pay_amount" style="width: 100px; " /><br />
+                Barrier type
+                <select id="Barrier_type">
+                    <option barrier_type="Up and in">Up and in</option>
+                    <option barrier_type="Up and out">Up and out</option>
+                    <option barrier_type="Down and in">Down and in</option>
+                    <option barrier_type="Down and out">Down and out</option>
+                </select><br />
+                Barrier level<input id="barrier_level" style="width: 100px; " />
+            </div>
+
+
+            <div class="upright">
+                <br /><br />
+                <div id="button1" class="fancybutton">
+                    Click Here to Simulate
+                </div><br />
+
+                Monte Carlo Price Simulation Outputs   <br /><br />
+                Price:
+                <div id="option_value"></div>
+                error:
+                <div id="standard_error"></div>
+                delta:
+                <div id="delta"></div>
+                gamma:
+                <div id="gamma"></div>
+                vega:
+                <div id="vega"></div>
+                theta:
+                <div id="theta"></div>
+                rho:
+                <div id="rho"></div>
+
+            </div>
+        </div>
+    </body>
+
+    <script src="Option.js"></script>
+
+</html>

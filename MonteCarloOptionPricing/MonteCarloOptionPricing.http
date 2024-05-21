@@ -1,0 +1,6 @@
+@MonteCarloOptionPricing_HostAddress = http://localhost:5094
+
+GET {{MonteCarloOptionPricing_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
